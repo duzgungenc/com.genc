@@ -1,0 +1,191 @@
+<!doctype html>
+<!--[if IE 7 ]> <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="images/favicon.ico">
+<title>Gench Template</title>
+<!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yellowtail%7COpen%20Sans%3A400%2C300%2C600%2C700%2C800" media="screen" />
+<!-- Custom styles for this template -->
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/jquery.bxslider.css" type="text/css" media="screen" />
+<link href="css/jquery.fancybox.css" rel="stylesheet">
+<link href="css/jquery.selectbox.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/mobile.css" rel="stylesheet">
+<link href="css/social-likes.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/settings.css" media="screen" />
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/print.css" rel="stylesheet" type="text/css" media="print">
+<link href="css/ts.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="js/wow.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key&amp;sensor=false"></script>
+
+<!-- Twitter Feed Scripts 
+     Uncomment to activate
+
+<script type="text/javascript" src="js/twitter/jquery.tweet.js"></script>
+<script type="text/javascript" src="js/twitter/twitter_feed.js"></script> -->
+
+</head>
+
+<body>
+<!--Header Start-->
+<header  data-spy="affix" data-offset-top="1" class="clearfix">
+    
+    <div class="bottom-header" >
+        <div class="container">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid"> 
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        <a class="navbar-brand" href="demo.html"><span class="logo"><span class="primary_text">Gench</span> </span></a> </div>
+                    
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="dropdown active"> <a href="demo.html">Cars</a></li>
+							
+						
+							
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse --> 
+                </div>
+                <!-- /.container-fluid --> 
+            </nav>
+        </div>
+        <div class="header_shadow"></div>
+    </div>
+</header>
+<!--Header End-->
+<div class="clearfix"></div>
+<section id="secondary-banner" class="dynamic-image-8"><!--for other images just change the class name of this section block like, class="dynamic-image-2" and add css for the changed class-->
+    <div class="container">
+        
+    </div>
+</section>
+<!--secondary-banner ends-->
+<div class="message-shadow"></div>
+<div class="clearfix"></div>
+<section class="content newDetail">
+
+</section>
+<!--content ends-->
+<div class="clearfix"></div>
+
+<!--Footer Start-->
+
+
+
+<div class="clearfix"></div>
+<section class="copyright-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="logo-footer margin-bottom-40 md-margin-bottom-40 sm-margin-bottom-10 xs-margin-bottom-20"><a href="#">
+                    
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+<div class="back_to_top"> <img src="images/arrow-up.png" alt="scroll up" /> </div>
+<!-- Bootstrap core JavaScript --> <script src="js/retina.js"></script> 
+<script src="js/main.js"></script> 
+
+<script type="text/javascript" src="js/jquery.fancybox.js"></script> 
+<script src="js/modernizr.custom.js"></script> 
+<script src="js/social-likes.min.js"></script><script defer src="js/jquery.flexslider.js"></script> 
+<script src="js/jquery.bxslider.js" type="text/javascript"></script> 
+<script src="js/jquery.selectbox-0.2.js" type="text/javascript"></script> 
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script> 
+<script type="text/javascript" src="js/jquery.easing.js"></script>
+</body>
+
+<script>
+
+var url = 'http://localhost:7001/com.genc/api/v1/getproduct';
+var sayfaUrl =window.location.href ;
+var ID = sayfaUrl.split('?id=')[1];
+$.getJSON(url,function(data){
+
+
+  var result = data.filter(function(element){
+    if(element.id==ID){
+       return element;
+    }
+      
+  });
+var field = result[0];
+  
+  
+ 
+ var newRows =  '<div class=container><div class="inner-page inventory-listing"><div class="clearfix inventory-heading margin-bottom-10"><div class=row><div class="col-xs-12 col-lg-10 col-md-10 col-sm-10"><h2>'+field.title+'</h2><span class=margin-top-10></span></div><div class="col-lg-2 col-md-2 col-sm-2 text-right"><h2>$ '+field.price+'</h2><em>Plus Taxes & Licensing</em></div></div></div><div class="content-nav margin-bottom-30"></div><div class=row><div class="col-xs-12 col-lg-8 col-md-8 col-sm-8 left-content padding-left-none"><div class=listing-slider><section class="home-banner slider"><div class=flexslider id=home-slider-canvas>'+
+ 
+' <ul class=slides>'+
+ 
+ '<li data-thumb="images/'+field.pic_url_big+'"><img alt=" " src="images/'+field.pic_url_big+'" data-full-image"=images/'+field.pic_url_big+'">'+
+ '</li>'+
+ '</ul>'+
+ 
+ '</div></section></div><div class=clearfix></div><div class="bs-example bs-example-tabs example-tabs margin-top-50"><ul class="nav nav-tabs"id=myTab></ul><div class="margin-bottom-20 margin-top-15 tab-content"id=myTabContent><div class="fade tab-pane active in"id=vehicle>'+field.informations+'</div><div class="fade tab-pane"id=technical><table class=technical><thead><tr><th>Engine<th><tbody><tr><td>Layout / number of cylinders<td>6<tr><td>Displacement<td>3.4 l<tr><td>Engine Layout<td>Mid-engine<tr><td>Horespower<td>315 hp<tr><td>@ rpm<td>6,700 rpm<tr><td>Torque<td>266 lb.-ft.<tr><td>Compression ratio<td>12.5 : 1</table><table class=technical><thead><tr><th>Performance<th><tbody><tr><td>Top Track Speed<td>173 mph<tr><td>0 - 60 mph<td>4.8 s</table><table class=technical><thead><tr><th>Transmission<th><tbody><tr><td>Manual Gearbox<td>6-speed with dual-mass flywheel and self-adjusting clutch</table><table class=technical><thead><tr><th>Fuel consumption<th><tbody><tr><td>City (estimate)<td>20<tr><td>Highway (estimate)<td>28</table><table class=technical><thead><tr><th>Body<th><tbody><tr><td>Length<td>172.2 in.<tr><td>Width<td>70.9 in.<tr><td>Height<td>50.4 in.<tr><td>Wheelbase<td>97.4 in.<tr><td>Maximum payload<td>739 lbs<tr><td>Curb weight<td>2910 lbs</table><table class=technical><thead><tr><th>Capacities<th><tbody><tr><td>Luggage compartment volume<td>5.3 cu. ft. (front) / 4.6 cu. ft. (rear)<tr><td>Fuel Tank Capacity<td>16.9 gal.</table></div><div class="fade tab-pane"id=location><div class=contact id=\'google-map-listing\' data-latitude=\'43.65\' data-longitude=\'-79.38\' data-parallax=false data-zoom=\'11\'style=height:350px></div></div><div class="fade tab-pane"id=comments><p><p><img alt=engine src=images/engine.png></div></div></div><div class=clearfix></div></div><div class="col-lg-4 col-md-4 col-sm-4 padding-right-none right-content"><div class=side-content><div class="car-info margin-bottom-50"><div class=table-responsive><table class=table><tr><td>Body Style:<td>'+field.body_style+'<tr><tr><td>TRANSMISSION:<td>'+field.transmission+'<tr><td>EXTERIOR:<td>'+field.exterior+'<tr><td>INTERIOR:<td>'+field.interior+'<tr><td>MILES:<td>'+field.miles+'<tr><td>DOORS:<td>2<tr><td>PASSENGERS:<td>'+field.passengers+'<tr><td>STOCK #:<td>'+field.stock+'<tr><td>VIN #:<td>'+field.vin+'<tr><td>FUEL MILEAGE:<td>'+field.fuel_mileage+'<tr><td>FUEL TYPE:<td>'+field.fuel_type+'</table></div></div><ul class="pull-right social-likes"data-title="Blog Post"data-url=http://themesuite.com></ul><div class=clearfix></div><div class="financing_calculator margin-top-40"></div></div></div></div></div></div>';
+ $('.newDetail').html(newRows);
+ 
+ 
+ if($('#home-slider-canvas').length){
+		$('#home-slider-canvas').flexslider({
+			animation: "slide",
+			controlNav: false,
+			directionNav:false,
+			animationLoop: false,
+			slideshow: false,
+			sync: "#home-slider-thumbs",
+			after: function(){				
+				if(!$(".home-banner > i.flex-active-slide > a > img").length){
+					$(".home-banner").find("li.flex-active-slide > img").wrap("<a class='fancybox fancybox_listing_link' href='" + $("li.flex-active-slide img").data("full-image") + "'></a>");
+					$(".fancybox").fancybox();
+				}
+			},
+			start: function(){
+				$(".home-banner").find("li.flex-active-slide > img").wrap("<a class='fancybox fancybox_listing_link' href='" + $("li.flex-active-slide img").data("full-image") + "'></a>");
+				$(".fancybox").fancybox();
+			}
+		});
+	}
+ 
+});
+
+
+ 
+
+ 
+ 
+</script>
+</html>
